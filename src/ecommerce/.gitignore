@@ -1,5 +1,5 @@
 .env
-
+ecommerce/aws/aws.py
 ecommerce/settings/local.py
 ecommerce/settings/base.py
 
