@@ -54,13 +54,13 @@
       <nav id="nav-menu-container">
         <ul class="nav-menu">
           <li class="nav-item {% if request.path == home_url %}active{% endif %}">
-            <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="{{ home_url }}">Home <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item {% if request.path == contact_url %}active{% endif %}">
             <a class="nav-link" href="/contact/">Contact</a>
           </li>
           <li class="nav-item {% if request.path == product_list_url %}active{% endif %}">
-            <a class="nav-link" href="/products/">Products</a>
+            <a class="nav-link" href="products">Products</a>
           </li>
 
 
@@ -71,23 +71,23 @@
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
               <a class="dropdown-item {% if request.path == account_url %}active{% endif %}" href="{{ account_url }}">Home</a>
-              <a class="dropdown-item" href="/account_url/#billing">Billing</a>
+              <a class="dropdown-item" href="{{ account_url }}#billing">Billing</a>
               <a class="dropdown-item" href="{% url "account:user-product-history" %}">History</a>
               <a class='dropdown-item' href='{% url "library" %}'>Library</a>
               <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="/logout_url/">Logout</a>
+              <a class="dropdown-item" href="{{ logout_url }}">Logout</a>
             </div>
           </li>
           {% else %}
            <li class="nav-item {% if request.path == register_url %}active{% endif %}">
-            <a class="nav-link" href="/register_url/">Register</a>
+            <a class="nav-link" href="{{ register_url }}">Register</a>
           </li>
           <li class="nav-item {% if request.path == login_url %}active{% endif %}">
-            <a class="nav-link" href="/login_url/">Login</a>
+            <a class="nav-link" href="{{ login_url }}">Login</a>
           </li>
           {% endif %}
           <li class="nav-item {% if request.path == cart_url %}active{% endif %}">
-            <a class="nav-link" href="/cart_url/"><span class='navbar-cart-count'>{{ request.session.cart_items }}</span> <i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+            <a class="nav-link" href="{{ cart_url }}"><span class='navbar-cart-count'>{{ request.session.cart_items }}</span> <i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
 
         </ul>
       </nav><!-- #nav-menu-container -->
@@ -111,8 +111,8 @@
             <div class="carousel-background"><img src='{% static "img/intro-carousel/1.jpg"  %}' alt=""></div>
             <div class="carousel-container">
               <div class="carousel-content">
-                <h2>Specializing in small business and business professionals</h2>
-                <p>Our incubator program for small businesses will set up your Marketing, Finances and Technology.   We focus on setting up your framework so you can focus on what you do best.</p>
+                <h2>We are professional</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                 <a href="#featured-services" class="btn-get-started scrollto">Get Started</a>
               </div>
             </div>
@@ -122,8 +122,8 @@
             <div class="carousel-background"><img src='{% static "img/intro-carousel/2.jpg" %}' alt=""></div>
             <div class="carousel-container">
               <div class="carousel-content">
-                <h2>You don’t have to do it all alone</h2>
-                <p>Do it yourself maybe the the cheapest option but it may not be best option.  We offer a no risk ROI.  Accelerate your growth with professional direction and proven methods. We focus on setting up your framework so you can focus on what you do best.</p>
+                <h2>At vero eos et accusamus</h2>
+                <p>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut.</p>
                 <a href="#featured-services" class="btn-get-started scrollto">Get Started</a>
               </div>
             </div>
@@ -133,8 +133,8 @@
             <div class="carousel-background"><img src='{% static "img/intro-carousel/3.jpg" %}' alt=""></div>
             <div class="carousel-container">
               <div class="carousel-content">
-                <h2>Professional Marketing Campaign</h2>
-                <p>Specializing in small business and new product launches. Jump-start your next marketing campaign with professional direction and experience. So you can launch your business ideas quickly and comprehensive.</p>
+                <h2>Temporibus autem quibusdam</h2>
+                <p>Beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt omnis iste natus error sit voluptatem accusantium.</p>
                 <a href="#featured-services" class="btn-get-started scrollto">Get Started</a>
               </div>
             </div>
@@ -144,8 +144,8 @@
             <div class="carousel-background"><img src='{% static "img/intro-carousel/4.jpg" %}' alt=""></div>
             <div class="carousel-container">
               <div class="carousel-content">
-                <h2>Is your Web design and Marketing company working in tangent?</h2>
-                <p>Your website should be generating more marketing leads and your marketing should work in tangent with your website.  They both should be generating intelligence to make the right business decisions.</p>
+                <h2>Nam libero tempore</h2>
+                <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum.</p>
                 <a href="#featured-services" class="btn-get-started scrollto">Get Started</a>
               </div>
             </div>
@@ -155,8 +155,8 @@
             <div class="carousel-background"><img src='{% static "img/intro-carousel/5.jpg" %}' alt=""></div>
             <div class="carousel-container">
               <div class="carousel-content">
-                <h2>Stop struggling to reach customers.</h2>
-                <p>We can identify them, reach them and measure the most effective way to turn leads into real sales.</p>
+                <h2>Magnam aliquam quaerat</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                 <a href="#featured-services" class="btn-get-started scrollto">Get Started</a>
               </div>
             </div>
@@ -189,22 +189,22 @@
 
           <div class="col-lg-4 box">
             <i class="ion-ios-bookmarks-outline"></i>
-            <h4 class="title"><a href="">New businesses/professionals</a></h4>
-            <p class="description">find out how we can help you start a new business</p>
+            <h4 class="title"><a href="">Lorem Ipsum Delino</a></h4>
+            <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
           </div>
 
           <div class="col-lg-4 box box-bg">
             <i class="ion-ios-stopwatch-outline"></i>
-            <h4 class="title"><a href="">Existing businesses looking for a change</a></h4>
-            <p class="description">reinvigorate your business with a fresh campaign and streamline business practices.</p>
-
+            <h4 class="title"><a href="">Dolor Sitema</a></h4>
+            <p class="description">Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat tarad limino ata</p>
           </div>
 
           <div class="col-lg-4 box">
             <i class="ion-ios-heart-outline"></i>
-            <h4 class="title"><a href="">Launching a new product/service</a></h4>
-            <p class="description">Consult, identify and measure your campaigns.</p>
+            <h4 class="title"><a href="">Sed ut perspiciatis</a></h4>
+            <p class="description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
           </div>
+
         </div>
       </div>
     </section><!-- #featured-services -->
@@ -217,7 +217,7 @@
 
         <header class="section-header">
           <h3>About Us</h3>
-          <p>We used to be a start up ourselves so we know the difficulties that you face.  As consultants we’ll show you how to utilize the Entrepreneur community, leverage the latest technology trends and provide knowledge and support.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
         </header>
 
         <div class="row about-cols">
@@ -340,26 +340,26 @@
         <div class="skills-content">
 
           <div class="progress">
-            <div class="progress-bar bg-info" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
-              <span class="skill">Karen's $$$<i class="val">50%</i></span>
-            </div>
-          </div>
-
-          <div class="progress">
-            <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100">
-              <span class="skill">After condo<i class="val">30%</i></span>
-            </div>
-          </div>
-
-          <div class="progress">
-            <div class="progress-bar bg-success" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
-              <span class="skill">Spare Time<i class="val">75%</i></span>
-            </div>
-          </div>
-
-          <div class="progress">
             <div class="progress-bar bg-success" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
-              <span class="skill">$$$ After starting business<i class="val">100%</i></span>
+              <span class="skill">HTML <i class="val">100%</i></span>
+            </div>
+          </div>
+
+          <div class="progress">
+            <div class="progress-bar bg-info" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
+              <span class="skill">CSS <i class="val">90%</i></span>
+            </div>
+          </div>
+
+          <div class="progress">
+            <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+              <span class="skill">JavaScript <i class="val">75%</i></span>
+            </div>
+          </div>
+
+          <div class="progress">
+            <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100">
+              <span class="skill">Photoshop <i class="val">55%</i></span>
             </div>
           </div>
 
@@ -382,12 +382,12 @@
         <div class="row counters">
 
   				<div class="col-lg-3 col-6 text-center">
-            <span data-toggle="counter-up">0</span>
+            <span data-toggle="counter-up">274</span>
             <p>Clients</p>
   				</div>
 
           <div class="col-lg-3 col-6 text-center">
-            <span data-toggle="counter-up">2</span>
+            <span data-toggle="counter-up">421</span>
             <p>Projects</p>
   				</div>
 
